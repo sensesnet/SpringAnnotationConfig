@@ -20,5 +20,11 @@
         <property name="numberOfWorkers" value="50"/>
     </bean>
 
-
+    <bean id="message" class="events.Message">
+            <property name="message" value="Hello! It's message!"/>
+    </bean>
+    <bean id="startedEvent" class="events.StartEventHandler"/>
+    <bean id="closedEvent" class="events.CloseEventHandler"/>
+    <bean id="refreshEvent" class="events.RefreshEventHandler"/>
+    <bean id="stoppedEvent" class="events.StopEventHandler"/>
 </beans>
