@@ -30,9 +30,9 @@ public class MainRunner {
          * - ContextRefreshEvent     * When context refresh() or init
          * - ContextCloseEvent       * When context closed by close()
          */
-        context.start();
+//        context.start();
         Message message = (Message) context.getBean("message");
-        context.refresh();
+//        context.refresh();
         System.out.println("Message: " + message.getMessage());
         context.stop();
         context.start();
