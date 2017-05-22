@@ -1,4 +1,5 @@
 import autowiring.other.CompanyBean;
+import events.contextEvent.Message;
 import events.customerEvent.EventPublisher;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -29,13 +30,13 @@ public class MainRunner {
          * - ContextRefreshEvent     * When context refresh() or init
          * - ContextCloseEvent       * When context closed by close()
          */
-//        context.start();
-//        Message message = (Message) context.getBean("message");
-//        context.refresh();
-//        System.out.println("Message: " + message.getMessage());
-//        context.stop();
-//        context.start();
-//        System.out.println("Message: " + message.getMessage());
+        context.start();
+        Message message = (Message) context.getBean("message");
+        context.refresh();
+        System.out.println("Message: " + message.getMessage());
+        context.stop();
+        context.start();
+        System.out.println("Message: " + message.getMessage());
 //        context.close();
 
         /**
