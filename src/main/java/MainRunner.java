@@ -1,4 +1,5 @@
 import autowiring.other.CompanyBean;
+import events.customerEvent.EventPublisher;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,7 +20,7 @@ public class MainRunner {
         System.out.println("Company name: "+ companyBean.getCompanyName());
         System.out.println("Numbers of customers: "+ companyBean.getCustomersBean().getNumberOfCustomers());
         System.out.println("Numbers of workers: "+ companyBean.getWorkersBean().getNumberOfWorkers());
-        context.registerShutdownHook();
+//        context.registerShutdownHook();
 
         /**
          * Here example how you can use context events.
@@ -41,8 +42,8 @@ public class MainRunner {
          * Here example how you can use customers events.
          */
 
-//        EventPublisher eventPublisher = (EventPublisher) context.getBean("customerPublisher");
-//        eventPublisher.publishEvent();
-//        context.close();
+        EventPublisher eventPublisher = (EventPublisher) context.getBean("customerPublisher");
+        eventPublisher.publishEvent();
+        context.close();
     }
 }

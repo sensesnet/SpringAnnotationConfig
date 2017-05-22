@@ -5,6 +5,6 @@ import org.springframework.context.event.ContextRefreshedEvent;
 
 public class RefreshEventHandler implements ApplicationListener<ContextRefreshedEvent> {
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        System.out.println(" - Context refresh event!");
+        System.out.println(" - Event: Context refreshed or initialized!");
     }
 }

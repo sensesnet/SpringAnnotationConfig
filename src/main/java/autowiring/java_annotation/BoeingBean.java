@@ -1,6 +1,9 @@
 package autowiring.java_annotation;
 
-public class BoingBean {
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class BoeingBean {
 
     private String model;
     private Integer numberOfpassangers;
@@ -19,5 +22,15 @@ public class BoingBean {
 
     public void setNumberOfpassangers(Integer numberOfpassangers) {
         this.numberOfpassangers = numberOfpassangers;
+    }
+
+    @PostConstruct
+    public void postConstruct(){
+        System.out.println("init boeingBean");
+    }
+
+    @PreDestroy
+    public void preDestroy(){
+        System.out.println("destroy boeingBean");
     }
 }

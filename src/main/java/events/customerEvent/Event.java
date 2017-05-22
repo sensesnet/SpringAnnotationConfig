@@ -10,6 +10,6 @@ public class Event extends ApplicationEvent{
 
     @Override
     public String toString() {
-        return "this is customers event";
+        return " - Event: Customers event!";
     }
 }

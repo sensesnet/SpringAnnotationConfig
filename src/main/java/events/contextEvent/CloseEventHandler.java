@@ -6,6 +6,6 @@ import org.springframework.context.event.ContextClosedEvent;
 public class CloseEventHandler implements ApplicationListener<ContextClosedEvent> {
 
     public void onApplicationEvent(ContextClosedEvent contextClosedEvent) {
-        System.out.println(" - Context close event!");
+        System.out.println(" - Event: Context close!");
     }
 }

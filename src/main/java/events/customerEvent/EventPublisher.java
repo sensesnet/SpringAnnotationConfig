@@ -7,9 +7,9 @@ public class EventPublisher implements ApplicationEventPublisherAware {
 
     private ApplicationEventPublisher publisher;
 
-    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
-
-        this.publisher = applicationEventPublisher;
+    @Override
+    public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
+        this.publisher = publisher;
     }
 
      public void publishEvent(){
