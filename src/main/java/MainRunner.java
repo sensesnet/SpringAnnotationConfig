@@ -30,14 +30,12 @@ public class MainRunner {
          * - ContextRefreshEvent     * When context refresh() or init
          * - ContextCloseEvent       * When context closed by close()
          */
-//        context.start();
         Message message = (Message) context.getBean("message");
 //        context.refresh();
         System.out.println("Message: " + message.getMessage());
         context.stop();
         context.start();
         System.out.println("Message: " + message.getMessage());
-//        context.close();
 
         /**
          * Here example how you can use customers events.
