@@ -6,6 +6,6 @@ import org.springframework.context.event.ContextStartedEvent;
 public class StartEventHandler implements ApplicationListener<ContextStartedEvent> {
 
     public void onApplicationEvent(ContextStartedEvent contextStartedEvent) {
-        System.out.println(" - Started context event!");
+        System.out.println(" - Context start event!");
     }
 }

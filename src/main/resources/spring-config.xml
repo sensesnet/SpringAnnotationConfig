@@ -4,9 +4,10 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+    <!--Use annotation for config-->
     <context:annotation-config/>
 
+    <!--Autowiring-->
     <bean id="company" class="autowiring.other.CompanyBean">
         <constructor-arg index="0" value="Stereolife"/>
         <constructor-arg index="1" ref="customers"/>
@@ -20,6 +21,8 @@
         <property name="numberOfWorkers" value="50"/>
     </bean>
 
+
+    <!--Here application context event-->
     <bean id="message" class="events.contextEvent.Message">
             <property name="message" value="Hello! It's message!"/>
     </bean>
@@ -27,4 +30,11 @@
     <bean id="closedEvent" class="events.contextEvent.CloseEventHandler"/>
     <bean id="refreshEvent" class="events.contextEvent.RefreshEventHandler"/>
     <bean id="stoppedEvent" class="events.contextEvent.StopEventHandler"/>
+
+    <!--Here customers events-->
+
+    <bean id="customerEvent" class="events.customerEvent.CustomerEventHandler"/>
+    <bean id="customerPublisher" class="events.customerEvent.EventPublisher"/>
+
+
 </beans>
