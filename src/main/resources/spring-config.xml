@@ -7,24 +7,24 @@
 
     <context:annotation-config/>
 
-    <bean id="company" class="autowiring.CompanyBean">
+    <bean id="company" class="autowiring.other.CompanyBean">
         <constructor-arg index="0" value="Stereolife"/>
         <constructor-arg index="1" ref="customers"/>
         <constructor-arg index="2" ref="workers"/>
         <property name="companyName" value="Auqa"/>
     </bean>
-    <bean id="customers" class="autowiring.CustomersBean">
+    <bean id="customers" class="autowiring.other.CustomersBean">
         <property name="numberOfCustomers" value="1000"/>
     </bean>
-    <bean id="workers" class="autowiring.WorkersBean">
+    <bean id="workers" class="autowiring.other.WorkersBean">
         <property name="numberOfWorkers" value="50"/>
     </bean>
 
-    <bean id="message" class="events.Message">
+    <bean id="message" class="events.contextEvent.Message">
             <property name="message" value="Hello! It's message!"/>
     </bean>
-    <bean id="startedEvent" class="events.StartEventHandler"/>
-    <bean id="closedEvent" class="events.CloseEventHandler"/>
-    <bean id="refreshEvent" class="events.RefreshEventHandler"/>
-    <bean id="stoppedEvent" class="events.StopEventHandler"/>
+    <bean id="startedEvent" class="events.contextEvent.StartEventHandler"/>
+    <bean id="closedEvent" class="events.contextEvent.CloseEventHandler"/>
+    <bean id="refreshEvent" class="events.contextEvent.RefreshEventHandler"/>
+    <bean id="stoppedEvent" class="events.contextEvent.StopEventHandler"/>
 </beans>

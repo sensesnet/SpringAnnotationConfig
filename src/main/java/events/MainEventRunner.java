@@ -1,5 +1,6 @@
 package events;
 
+import events.contextEvent.Message;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -1,4 +1,4 @@
-package events;
+package events.contextEvent;
 
 public class Message {
     private String message;
